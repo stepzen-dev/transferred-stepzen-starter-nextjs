@@ -1,0 +1,12 @@
+{
+  "create": {
+    "commands": [
+      "npm install",
+      "cp .env.sample .env.local",
+      "stepzen init --yes",
+      "stepzen upload schema {{STEPZEN_ENDPOINT}} --dir ./stepzen",
+      "stepzen deploy {{STEPZEN_ENDPOINT}} --schema {{STEPZEN_ENDPOINT}}"
+    ],
+    "instructions": "To start your application:\n\ncd {{WORKING_FOLDER}}\n\nnpm run dev (in one terminal)\n\nstepzen start (in another)"
+  }
+}
